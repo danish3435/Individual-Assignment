@@ -1,0 +1,128 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester 5 | My Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1><div class="logo">My Personal Website</div></h1>
+            <ul>
+                <li><a href="Index.html">Home &#127968;</a></li>
+                <li><a href="About Me.html">About Me &#129312;</a></li>
+                <li><a href="Education.html">Education &#127891;</a></li>
+                <li><a href="Skills.html">Skills &#128161;</a></li>
+                <li><a href="Experiences.html">Experiences &#128203;</a></li>
+                <li><a href="My Family.html">Family &#128106;</a></li>
+                <li><a href="Contact.html">Contact &#128222;</a></li>
+            </ul>
+        </nav>
+    </header>
+	
+    <main>
+        <section class="hero">
+            <h1>Semester 5 Gallery</h1>
+            <p>A collection of my favorite moments from the fifth semester. Click images to enlarge!</p>
+        </section>
+
+        <div class="gallery-grid" id="gallery">
+            <figure class="gallery-item">
+                <img src="photos/sem5/dinner at mamak.jpeg" alt="Dinner at Yasmeen">
+                <figcaption>Me and the boys dining at a restaurant known as Yasmeen.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem5/hiking to a waterfall .jpeg" alt="Hiking to a waterfall">
+                <figcaption>Hiking with Aiman to reach to a waterfall.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem5/quick selfie.jpeg" alt="Quick selfie">
+                <figcaption>Selfie with Shahrul.</figcaption>
+            </figure>
+				
+            <figure class="gallery-item">
+                <img src="photos/sem5/arcvhive visit with lecturers.jpeg" alt="Group photo in NAM">
+                <figcaption>Group photo with lecturers at National Archive Malaysia.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem5/on a jog.jpeg" alt="During a jog">
+                <figcaption>Group photo of us after a jog.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem5/funny pose of me.jpeg" alt="Posing during a meeting">
+                <figcaption>Posing for a picture during a meeting.</figcaption>
+            </figure>
+                   
+            <figure class="gallery-item">
+                <img src="photos/sem5/during outreach meeting.jpeg" alt="During a meeting">
+                <figcaption>Me, Rafiq and Amirul during a meeting.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem5/archive visit with friends.jpeg" alt="Archive visit">
+                <figcaption>Me and my friends during archives visit.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem5/photoshoot session.jpeg" alt="Photoshoot session">
+                <figcaption>Quick selfie during photoshoot session.</figcaption>
+            </figure>
+				
+            <figure class="gallery-item video-item">
+                <video controls>
+                    <source src="photos/sem5/outreach discussion.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>Practising games for Outreach Event.</figcaption>
+            </figure>
+			
+        </div>
+    </main>
+
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="imgFull">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Danish Jasni | IMD 318 Assignment</p>
+    </footer>
+	
+    <audio id="background-audio" autoplay loop controls>
+        <source src="Songs/Tounge Tied.m4a" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("imgFull");
+        const captionText = document.getElementById("caption");
+        const galleryImages = document.querySelectorAll(".gallery-item img");
+
+        galleryImages.forEach(img => {
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        });
+
+        const closeBtn = document.querySelector(".close-modal");
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

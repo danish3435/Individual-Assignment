@@ -1,0 +1,127 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester 4 | My Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1><div class="logo">My Personal Website</div></h1>
+            <ul>
+                <li><a href="Index.html">Home &#127968;</a></li>
+                <li><a href="About Me.html">About Me &#129312;</a></li>
+                <li><a href="Education.html">Education &#127891;</a></li>
+                <li><a href="Skills.html">Skills &#128161;</a></li>
+                <li><a href="Experiences.html">Experiences &#128203;</a></li>
+                <li><a href="My Family.html">Family &#128106;</a></li>
+                <li><a href="Contact.html">Contact &#128222;</a></li>
+            </ul>
+        </nav>
+    </header>
+	
+    <main>
+        <section class="hero">
+            <h1>Semester 4 Gallery</h1>
+            <p>A collection of my favorite moments from the fourth semester. Click to expand!</p>
+        </section>
+
+        <div class="gallery-grid" id="gallery">
+            <figure class="gallery-item">
+                <img src="photos/sem4/dinner at amanjaya.jpeg" alt="Dinner in a mall">
+                <figcaption>Having dinner inside Amanjaya Mall.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem4/me n mift.jpeg" alt="With a friend">
+                <figcaption>Duo photo with Miftahul.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem4/raya pic.jpeg" alt="Raya picture">
+                <figcaption>A group selfie during Raya celebration.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem4/during e merit.jpeg" alt="During e-merit session">
+                <figcaption>Me and friends during e-merit session at Mini Stadium.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem4/funny pose.jpeg" alt="Funny pose">
+                <figcaption>Funny pose of me and Shahrul.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem4/hiking at bukit h.jpeg" alt="Hiking at Bukit H">
+                <figcaption>Hiking at the Bukit H with friends.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem4/interview at archive.jpeg" alt="Interview at NAM">
+                <figcaption>Interviewing session with National Archive Malaysia.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem4/fellow intern shu.jpeg" alt="With fellow intern">
+                <figcaption>Me and my fellow intern, Shuhadah.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem4/during internship.jpeg" alt="During internship">
+                <figcaption>Last day of my internship during semester break.</figcaption>
+            </figure>
+			
+            <figure class="gallery-item video-item">
+                <video controls>
+                    <source src="photos/sem4/video Raya (2).mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>Photoshoot session during Raya celebration.</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="imgFull">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Danish Jasni | IMD 318 Assignment</p>
+    </footer>
+	
+    <audio id="background-audio" autoplay loop controls>
+        <source src="Songs/Don't Mind.m4a" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("imgFull");
+        const captionText = document.getElementById("caption");
+        const galleryImages = document.querySelectorAll(".gallery-item img");
+
+        galleryImages.forEach(img => {
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        });
+
+        const closeBtn = document.querySelector(".close-modal");
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester 1 | My Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1><div class="logo">My Personal Website</div></h1>
+            <ul>
+                <li><a href="Index.html">Home &#127968;</a></li>
+                <li><a href="About Me.html">About Me &#129312;</a></li>
+                <li><a href="Education.html">Education &#127891;</a></li>
+                <li><a href="Skills.html">Skills &#128161;</a></li>
+                <li><a href="Experiences.html">Experiences &#128203;</a></li>
+                <li><a href="My Family.html">Family &#128106;</a></li>
+                <li><a href="Contact.html">Contact &#128222;</a></li>
+            </ul>
+        </nav>
+    </header>
+	
+    <main>
+        <section class="hero">
+            <h1>Semester 1 Gallery</h1>
+            <p>A collection of my favorite moments. Click any image to enlarge it!</p>
+        </section>
+
+        <div class="gallery-grid" id="gallery">
+            <figure class="gallery-item">
+                <img src="photos/sem1/WhatsApp Image 2025-12-05 at 23.47.33_2d672440.jpg" alt="Group Assignment">
+                <figcaption>Early Weeks - Conducting assignments with friends.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem1/WhatsApp Image 2025-12-05 at 23.47.34_cbc13a0a.jpg" alt="In a library">
+                <figcaption>Me and a friend in a library.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem1/WhatsApp Image 2025-12-05 at 23.47.37_c11ad606.jpg" alt="Group Project">
+                <figcaption>Late night study sessions at the library.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem1/WhatsApp Image 2025-12-05 at 23.47.36_f0522d29.jpg" alt="Library Session">
+                <figcaption>Studying with a friend in a library.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem1/WhatsApp Image 2025-12-05 at 23.47.38_f9359582.jpg" alt="Group Presentation">
+                <figcaption>Practicing our group assignment presentation.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem1/WhatsApp Image 2025-12-05 at 23.47.34_0e51b7b1.jpg" alt="Cocoriculum Activity">
+                <figcaption>Group photo of my cocoriculum group.</figcaption>
+            </figure>
+            
+            <figure class="gallery-item">
+                <img src="photos/sem1/WhatsApp Image 2025-12-05 at 23.47.38_cf6091b9.jpg" alt="After a test">
+                <figcaption>Group photo after finishing a test.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem1/WhatsApp Image 2025-12-05 at 23.47.39_77769bdc.jpg" alt="Outing">
+                <figcaption>Me and my friends after going to a waterpark.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem1/WhatsApp Image 2025-12-05 at 23.47.36_e69300f8.jpg" alt="Group Class">
+                <figcaption>Group photo with my classmates.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem1/WhatsApp Image 2025-12-05 at 23.47.39_343454a3.jpg" alt="After a final exam paper">
+                <figcaption>Group photo of us after a final examination.</figcaption>
+            </figure>
+        
+            <figure class="gallery-item video-item">
+                <video controls>
+                    <source src="photos/sem1/video waterpark.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>Teaser video at Bertam Resort & Waterpark.</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="imgFull">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Danish Jasni | IMD 318 Assignment</p>
+    </footer>
+	
+    <audio id="background-audio" autoplay loop controls>
+        <source src="Songs/Fine Line.m4a" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // JavaScript for Lightbox Interaction
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("imgFull");
+        const captionText = document.getElementById("caption");
+        const galleryImages = document.querySelectorAll(".gallery-item img");
+
+        galleryImages.forEach(img => {
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        });
+
+        // Close logic
+        const closeBtn = document.querySelector(".close-modal");
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close on clicking outside the image
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

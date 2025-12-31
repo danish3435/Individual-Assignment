@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester 2 | My Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1><div class="logo">My Personal Website</div></h1>
+            <ul>
+                <li><a href="Index.html">Home &#127968;</a></li>
+                <li><a href="About Me.html">About Me &#129312;</a></li>
+                <li><a href="Education.html">Education &#127891;</a></li>
+                <li><a href="Skills.html">Skills &#128161;</a></li>
+                <li><a href="Experiences.html">Experiences &#128203;</a></li>
+                <li><a href="My Family.html">Family &#128106;</a></li>
+                <li><a href="Contact.html">Contact &#128222;</a></li>
+            </ul>
+        </nav>
+    </header>
+	
+    <main>
+        <section class="hero">
+            <h1>Semester 2 Gallery</h1>
+            <p>A collection of my favorite moments from the second semester. Click any image to zoom!</p>
+        </section>
+
+        <div class="gallery-grid" id="gallery">
+            <figure class="gallery-item">
+                <img src="photos/sem2/raya.jpeg" alt="Raya Picture">
+                <figcaption>Group photo during Raya celebration.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem2/toilet stadium.jpeg" alt="In a mini stadium's toilet">
+                <figcaption>Us after playing badminton at mini stadium.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem2/pc assembling.jpeg" alt="Preparing for a test">
+                <figcaption>Me and the boys practising for our pc assembling test.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem2/ass trip.jpeg" alt="Assignment trip">
+                <figcaption>Going for an assignment trip.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem2/ass trip 2.jpeg" alt="Assignment trip">
+                <figcaption>A quick selfie inside a public library in Penang.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem2/going back from ass trip.jpeg" alt="assignment trip">
+                <figcaption>A quick selfie with the boys before going for a midterm break.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem2/in class.jpeg" alt="In a class">
+                <figcaption>My friend taking a selfie with me during a class.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem2/ass discussion.jpeg" alt="Assignment discussion">
+                <figcaption>A discussion of our group assignment.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem2/mascot pic.jpeg" alt="Mascot photo">
+                <figcaption>Selfie picture wearing mascot with a friend.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem2/class photo wearing mascot.jpeg" alt="Group photo">
+                <figcaption>Class photo of wearing mascots.</figcaption>
+            </figure>
+				
+            <figure class="gallery-item video-item">
+                <video controls>
+                    <source src="photos/sem2/Sem2 video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>Photoshoot session for mascot picture.</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="imgFull">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Danish Jasni | IMD 318 Assignment</p>
+    </footer>
+	
+    <audio id="background-audio" autoplay loop controls>
+        <source src="Songs/Dream.m4a" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // Lightbox Logic
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("imgFull");
+        const captionText = document.getElementById("caption");
+        const galleryImages = document.querySelectorAll(".gallery-item img");
+
+        galleryImages.forEach(img => {
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        });
+
+        // Close logic
+        const closeBtn = document.querySelector(".close-modal");
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

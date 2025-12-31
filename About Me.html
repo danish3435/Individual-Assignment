@@ -1,0 +1,82 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | My Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="about-page">
+
+    <header>
+        <nav>
+            <h1><div class="logo">My Personal Website</div></h1>
+            <ul>
+                <li><a href="Index.html">Home &#127968;</a></li>
+                <li><a href="About Me.html">About Me &#129312;</a></li>
+                <li><a href="Education.html">Education &#127891;</a></li>
+                <li><a href="Skills.html">Skills &#128161;</a></li>
+                <li><a href="Experiences.html">Experiences &#128203;</a></li>
+                <li><a href="My Family.html">Family &#128106;</a></li>
+                <li><a href="Contact.html">Contact &#128222;</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div style="text-align: right; padding: 10px 50px;">
+            <button onclick="toggleTheme()" class="theme-btn">Switch Theme &#127769;</button>
+        </div>
+
+        <section class="about-section">
+            <div class="about-container">
+                <div class="profile-card">
+                    <div class="photo-gallery">
+                        <img src="photos/Me.jpeg" alt="Danish 1" class="about-img main-img">
+                        <div class="extra-photos">
+                            <img src="photos/Me.1.jpeg" alt="Danish 2" class="about-img extra-img">
+                            <img src="photos/Me.2.jpeg" alt="Danish 3" class="about-img extra-img">
+                        </div>
+                    </div>
+                    <h2>Danish Jasni (DJ)</h2>
+                    <p class="tagline">Information Management Student</p>
+                    
+                    <div class="fun-fact-box">
+                        <p id="fact-text">Click below for a fun fact about me!</p>
+                        <button onclick="generateFact()" class="fact-btn">Click for Fun Fact &#127922;</button>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <div class="content-box" onclick="highlightBox(this)">
+                        <h3>Who Am I?</h3>
+                        <p>Hello! My name is <strong>MUHAMMAD DANISH BIN JASNI</strong> but most of my friends call me DJ. I was born in 2005. I am currently a student enrolled in the Diploma in Information Management studying: <strong>IMD 318</strong>.</p>
+                    </div>
+                    
+                    <div class="content-box" onclick="highlightBox(this)">
+                        <h3>My Background</h3>
+                        <p>I was born in Sungai Petani, Kedah and raised in Kepala Batas, Pulau Pinang. I am passionate about <i>Outdoor Activities, Home Life, and Literature</i>.</p>
+                    </div>
+
+                    <div class="content-box" onclick="highlightBox(this)">
+                        <h3>Interests & Hobbies</h3>
+                        <ul class="hobby-list">
+                            <li><strong>Web Development:</strong> Crafting digital spaces.</li>
+                            <li><strong>Hiking:</strong> Exploring nature's trails.</li>
+                            <li><strong>Home Life:</strong> Finding peace in daily chores.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Danish Jasni | IMD 318 Individual Assignment</p>
+    </footer>
+    
+    <audio id="background-audio" autoplay loop controls>
+        <source src="Songs/Chess.m4a" type="audio/mpeg">
+    </audio>
+<script src ="JS.js"></script>
+</body>
+</html>

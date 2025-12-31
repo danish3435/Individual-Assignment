@@ -1,0 +1,85 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiences | My Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1><div class="logo">My Personal Website</div></h1>
+            <ul>
+                <li><a href="Index.html">Home &#127968;</a></li>
+                <li><a href="About Me.html">About Me &#129312;</a></li>
+                <li><a href="Education.html">Education &#127891;</a></li>
+                <li><a href="Skills.html">Skills &#128161;</a></li>
+                <li><a href="Experiences.html">Experiences &#128203;</a></li>
+                <li><a href="My Family.html">Family &#128106;</a></li>
+                <li><a href="Contact.html">Contact &#128222;</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   <main>
+        <section class="experience-section">
+            <h1>DJ's Experiences</h1>
+            <p>A summary of my professional and technical journey.</p>
+
+            <div class="filter-container">
+                <button class="filter-btn active" onclick="filterSelection('all')">Show All</button>
+                <button class="filter-btn" onclick="filterSelection('tech')">Technical</button>
+                <button class="filter-btn" onclick="filterSelection('work')">Work/Internship</button>
+            </div>
+
+            <div class="experience-container">
+                <article class="exp-card tech" data-category="tech">
+                    <div class="exp-date">2025</div>
+                    <div class="exp-info">
+                        <h2><u>Web Development</u></h2>
+                        <p class="company">HTML, CSS & JavaScript</p>
+                        <p>Developed interactive web content and structured personal projects using modern web standards.</p>
+                    </div>
+                </article>
+
+                <article class="exp-card" data-category="work">
+                    <div class="exp-date">July 2025 - Sept 2025</div>
+                    <div class="exp-info">
+                        <h2><u>Internship</u></h2>
+                        <p class="company">Hospital Kepala Batas (HKB)</p>
+                        <p>Responsible for handling patient records into the <i>SMRP</i> system within the Medical Records Unit.</p>
+                    </div>
+                </article>
+
+                <article class="exp-card tech" data-category="tech">
+                    <div class="exp-date">2024</div>
+                    <div class="exp-info">
+                        <h2><u>Software & Database</u></h2>
+                        <p class="company">C++ & MySQL</p>
+                        <p>Focused on logic-building with C++ and managing structured data through MySQL database queries.</p>
+                    </div>
+                </article>
+
+                <article class="exp-card" data-category="work">
+                    <div class="exp-date">Aug 2024 - Oct 2024</div>
+                    <div class="exp-info">
+                        <h2><u>Cashier</u></h2>
+                        <p class="company">Mashimoo Pet House</p>
+                        <p>Assisted in managing food stock, feline grooming, and handling daily financial transactions.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Danish Jasni | IMD 318 Individual Assignment</p>
+    </footer>
+	
+    <audio id="background-audio" autoplay loop controls>
+        <source src="Songs/Evergreen.m4a" type="audio/mpeg">
+    </audio>
+<script src ="JS.js"></script>
+</body>
+</html>

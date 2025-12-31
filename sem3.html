@@ -1,0 +1,132 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester 3 | My Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1><div class="logo">My Personal Website</div></h1>
+            <ul>
+                <li><a href="Index.html">Home &#127968;</a></li>
+                <li><a href="About Me.html">About Me &#129312;</a></li>
+                <li><a href="Education.html">Education &#127891;</a></li>
+                <li><a href="Skills.html">Skills &#128161;</a></li>
+                <li><a href="Experiences.html">Experiences &#128203;</a></li>
+                <li><a href="My Family.html">Family &#128106;</a></li>
+                <li><a href="Contact.html">Contact &#128222;</a></li>
+            </ul>
+        </nav>
+    </header>
+	
+    <main>
+        <section class="hero">
+            <h1>Semester 3 Gallery</h1>
+            <p>A collection of my favorite moments from the third semester. Click any image to enlarge.</p>
+        </section>
+
+        <div class="gallery-grid" id="gallery">
+            <figure class="gallery-item">
+                <img src="photos/sem3/going to candi.jpeg" alt="Hiking to Candi">
+                <figcaption>Hiking with friends to Candi.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem3/good time in candi.jpeg" alt="At Candi">
+                <figcaption>Having a good time in the river.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem3/in PI.jpeg" alt="At Pusat Islam">
+                <figcaption>Quick selfie in Pusat Islam.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem3/corporate shirt.jpeg" alt="Corporate Shirt">
+                <figcaption>Me and Aiman showing off our corporate shirt.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem3/quick selfie.jpeg" alt="Before Class">
+                <figcaption>Photo of me taking a selfie with friends before class.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem3/during class.jpeg" alt="During a class">
+                <figcaption>Us during a class.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem3/good time in legong.jpeg" alt="At Legong">
+                <figcaption>Group photo of us at Legong.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem3/me n mirfun.jpeg" alt="With Amir">
+                <figcaption>Matching shirt with Amir.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem3/event katarsis.jpeg" alt="During Katarsis Event">
+                <figcaption>A selfie during The Katarsis Event.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="photos/sem3/class pic blue.jpeg" alt="Class picture">
+                <figcaption>A blue themed picture of my classmates.</figcaption>
+            </figure>
+            
+            <figure class="gallery-item video-item">
+                <video controls>
+                    <source src="photos/sem3/In class.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>Timelapse video during a class.</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="imgFull">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Danish Jasni | IMD 318 Assignment</p>
+    </footer>
+	
+    <audio id="background-audio" autoplay loop controls>
+        <source src="Songs/Hotline.m4a" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("imgFull");
+        const captionText = document.getElementById("caption");
+        const galleryImages = document.querySelectorAll(".gallery-item img");
+
+        galleryImages.forEach(img => {
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        });
+
+        const closeBtn = document.querySelector(".close-modal");
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

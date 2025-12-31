@@ -1,0 +1,90 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education | My Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1><div class="logo">My Personal Website</div></h1>
+            <ul>
+                <li><a href="Index.html">Home &#127968;</a></li>
+                <li><a href="About Me.html">About Me &#129312;</a></li>
+                <li><a href="Education.html">Education &#127891;</a></li>
+                <li><a href="Skills.html">Skills &#128161;</a></li>
+                <li><a href="Experiences.html">Experiences &#128203;</a></li>
+                <li><a href="My Family.html">Family &#128106;</a></li>
+                <li><a href="Contact.html">Contact &#128222;</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="education-section">
+            <h1>DJ's Educational Background</h1>
+            <p>A summary of my academic journey. Use the search bar to filter by year or school!</p>
+            
+            <div class="search-container">
+                <input type="text" id="eduSearch" onkeyup="searchTable()" placeholder="Search for institution or year...">
+            </div>
+            
+            <table class="education-table" id="eduTable">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Institution</th>
+                        <th>Qualification</th>
+                        <th>Campus View</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="highlightRow(this)">
+                        <td>2023 - Present</td>
+                        <td><strong>UiTM Cawangan Kedah</strong></td>
+                        <td>Diploma in Information Management</td>
+                        <td>
+                            <a href="https://www.uitm.edu.my/" target="_blank" title="Visit UiTM Website">
+                                <img src="photos/UiTM.jpg" alt="UiTM Campus" class="edu-img">
+                            </a>
+                        </td>
+                    </tr>
+                    
+                    <tr onclick="highlightRow(this)">
+                        <td>2022</td>
+                        <td><strong>SMK Bertam Perdana</strong></td>
+                        <td>SPM</td>
+                        <td>
+                            <a href="https://www.facebook.com/smkbertamperdana/" target="_blank" title="Visit SMKBP Page">
+                                <img src="photos/SMKBP.jpg" alt="SMK Bertam Perdana" class="edu-img">
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr onclick="highlightRow(this)">
+                        <td>2017</td>
+                        <td><strong>SK Paya Keladi</strong></td>
+                        <td>UPSR</td>
+                        <td>
+                            <a href="https://www.facebook.com/sk.payakeladi/" target="_blank" title="Visit SKPK Page">
+                                <img src="photos/SKPK.jpg" alt="SK Paya Keladi" class="edu-img">
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Danish Jasni | IMD 318 Individual Assignment</p>
+    </footer>
+    
+    <audio id="background-audio" autoplay loop controls>
+        <source src="Songs/Graduation.m4a" type="audio/mpeg">
+    </audio>
+<script src ="JS.js"></script>
+</body>
+</html>

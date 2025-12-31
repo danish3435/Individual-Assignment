@@ -1,0 +1,96 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Family | My Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+           <h1><div class="logo">My Personal Website</div></h1>
+            <ul>
+                <li><a href="Index.html">Home &#127968;</a></li>
+                <li><a href="About Me.html">About Me &#129312;</a></li>
+                <li><a href="Education.html">Education &#127891;</a></li>
+                <li><a href="Skills.html">Skills &#128161;</a></li>
+                <li><a href="Experiences.html">Experiences &#128203;</a></li>
+                <li><a href="My Family.html">Family &#128106;</a></li>
+                <li><a href="Contact.html">Contact &#128222;</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="family-section">
+            <h1>DJ's Family Members</h1>
+            <p>Meet the people who support and inspire me every day.</p>
+
+            <div class="main-photo-container">
+                <img src="photos/family.jpg" alt="My Family Picture" class="Famili-img">
+            </div>
+
+            <div class="family-grid">
+                <div class="family-card">
+                    <img src="photos/ayah.jpg" alt="Father" class="family-img">
+                    <h3>Jasni Bin Kasim</h3>
+                    <p class="relation">Father</p>
+                    <p>My source of income and a bank clerk.</p>
+                    <button class="love-btn" onclick="sendLove(this)">Send Love ❤️ <span class="count">0</span></button>
+                </div>
+
+                <div class="family-card">
+                    <img src="photos/ibu.jpg" alt="Mother" class="family-img">
+                    <h3>Jawahair Binti Omar</h3>
+                    <p class="relation">Mother</p>
+                    <p>The Love of My Life and a lawyer's clerk.</p>
+                    <button class="love-btn" onclick="sendLove(this)">Send Love ❤️ <span class="count">0</span></button>
+                </div>
+
+                <div class="family-card">
+                    <img src="photos/kakak'.jpg" alt="Sibling" class="family-img">
+                    <h3>Dayana Binti Jasni</h3>
+                    <p class="relation">Sister</p>
+                    <p>My Servant and a loan-bank officer.</p>
+                    <button class="love-btn" onclick="sendLove(this)">Send Love ❤️ <span class="count">0</span></button>
+                </div>
+                
+                <div class="family-card">
+                    <img src="photos/abang.jpg" alt="Sibling" class="family-img">
+                    <h3>Muhammad Danial bin Jasni</h3>
+                    <p class="relation">Brother</p>
+                    <p>My Guidance and a student.</p>
+                    <button class="love-btn" onclick="sendLove(this)">Send Love ❤️ <span class="count">0</span></button>
+                </div>
+                
+                <div class="family-card highlight-me">
+                    <img src="photos/me.jpg" alt="Me" class="family-img">
+                    <h3>Muhammad Danish Bin Jasni (Me)</h3>
+                    <p class="relation">The Youngest</p>
+                    <p>The most caring amongst all.</p>
+                    <button class="love-btn" onclick="sendLove(this)">Send Love ❤️ <span class="count">0</span></button>
+                </div>
+				
+				<div class="family-card">
+                    <img src="photos/Miko.jpg" alt="Sibling" class="family-img">
+                    <h3>Miko</h3>
+                    <p class="relation">Kitten</p>
+                    <p>Our Solace.</p>
+                    <button class="love-btn" onclick="sendLove(this)">Send Love ❤️ <span class="count">0</span></button>
+                </div>
+				
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Danish Jasni | IMD 318 Individual Assignment</p>
+    </footer>
+    
+    <audio id="background-audio" autoplay loop controls>
+        <source src="Songs/Is This How Love Feels Like.m4a" type="audio/mpeg">
+    </audio>
+<script src ="JS.js"></script>
+</body>
+</html>
